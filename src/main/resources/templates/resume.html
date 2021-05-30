@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="description" content="" />
-<meta name="author" content="" />
-<title>Resume 공사중!!</title>
+<meta name="description" content="dohyun's resume" />
+<meta name="author" content="leedohyun" />
+<title th:text="#{resume.title}"></title>
 <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
 <!-- Font Awesome icons (free version)-->
 <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
@@ -19,9 +19,9 @@
 	<!-- Navigation-->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
 		<a class="navbar-brand js-scroll-trigger" href="#page-top">
-			<span class="d-block d-lg-none">이 도현</span> 
+			<span class="d-block d-lg-none" th:text="#{resume.name}"></span> 
 			<span class="d-none d-lg-block">
-				<img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.png" alt="..." />
+				<img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.png" alt="profile" />
 			</span>
 		</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,12 +29,12 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" th:text="#{About}"></a></li>
+				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience" th:text="#{Experience}"></a></li>
+				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education" th:text="#{Education}"></a></li>
+				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills" th:text="#{Skills}"></a></li>
+				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests" th:text="#{Interests}"></a></li>
+				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards" th:text="#{Awards}"></a></li>
 			</ul>
 		</div>
 	</nav>
@@ -182,6 +182,7 @@
 		<section class="resume-section" id="awards">
 			<div class="resume-section-content">
 				<h2 class="mb-5">Awards & Certifications</h2>
+<!-- 
 				<ul class="fa-ul mb-0">
 					<li><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> Google Analytics Certified Developer</li>
 					<li><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> Mobile Web Specialist - Google Certification</li>
@@ -194,6 +195,7 @@
 					<li><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> 1 <sup>st</sup> Place - James Buchanan High School - Hackathon 2006</li>
 					<li><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> 3 <sup>rd</sup> Place - James Buchanan High School - Hackathon 2005</li>
 				</ul>
+ -->
 			</div>
 		</section>
 	</div>
