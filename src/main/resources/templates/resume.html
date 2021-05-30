@@ -14,6 +14,9 @@
 <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/styles.css" rel="stylesheet" />
+<!-- kakaotalk icon -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
 </head>
 <body id="page-top">
 	<!-- Navigation-->
@@ -51,8 +54,13 @@
 				</div>
 				<p class="lead mb-5">더 좋은 세상을 위해 다양한 도구를 개발합니다.</p>
 				<div class="social-icons">
-					<a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a> <a class="social-icon" href="#!"><i class="fab fa-github"></i></a> <a
-						class="social-icon" href="#!"><i class="fab fa-twitter"></i></a> <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
+					<a class="social-icon" target="_blank" href="https://www.linkedin.com/in/leedohyun1985"><i class="fab fa-linkedin-in"></i></a> 
+					<a class="social-icon" target="_blank" href="https://github.com/leedohyun1985"><i class="fab fa-github"></i></a>
+					<a class="social-icon" target="_blank" href="https://twitter.com/leedohyun1985"><i class="fab fa-twitter"></i></a>
+					<a class="social-icon" target="_blank" href="https://www.facebook.com/dohyun.lee.50999/"><i class="fab fa-facebook-f"></i></a>
+					<a class="social-icon" data-toggle="qrpopover" title="" th:data-img="@{/assets/img/LineQR.png}" ><i class="fab fa-line"></i></a>
+					<a class="social-icon" data-toggle="qrpopover" title="" th:data-img="@{/assets/img/WechatQR.png}" ><i class="fab fa-weixin"></i></a>
+					<a class="social-icon" data-toggle="qrpopover" title="" th:data-img="@{/assets/img/KakaoTalkQR.png}" style="text-decoration: none;"><i class="xi-kakaotalk"></i></a>
 				</div>
 			</div>
 		</section>
@@ -199,9 +207,26 @@
 			</div>
 		</section>
 	</div>
+	<script	src="jquery-3.6.0.min.js"></script>
 	<!-- Bootstrap core JS-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- Core theme JS-->
 	<script src="js/scripts.js"></script>
+	
+		<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$('[data-toggle="qrpopover"]').popover({
+			 trigger: 'hover',
+			 placement:'bottom',
+	         html: true,
+	         content: function () {
+					return '<img height="150" width="150" src="'+$(this).data('img') + '" />';
+	         },
+	         title: 'Toolbox'
+		})
+		
+	});
+	</script>
 </body>
 </html>
