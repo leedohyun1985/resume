@@ -46,9 +46,18 @@
 		<!-- About-->
 		<section class="resume-section" id="about">
 			<div class="resume-section-content">
-				<h1 class="mb-0" th:inline="text">
+			
+				<th:block th:switch="${lang}">
+				<h1 th:case="en" class="mb-0" th:inline="text">
+					[[#{dohyun}]]<span class="text-primary" th:text="#{lee}"></span>
+				</h1>
+				<h1 th:case="ko" class="mb-0" th:inline="text">
 					[[#{lee}]]<span class="text-primary" th:text="#{dohyun}"></span>
 				</h1>
+				</th:block>
+
+
+				
 				<div class="subheading mb-5">
 					대한민국 · 서울시 · 종로구 · (010) 2222-6639 · <a href="mailto:leedohyun1985@gmail.com">leedohyun1985@gmail.com</a>
 				</div>
