@@ -3,7 +3,6 @@ package com.doh.resume.controller;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Enumeration;
-import java.util.Iterator;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
@@ -30,7 +29,7 @@ public class ResumeController {
 		logger.info("request.getRemotePort() : " + request.getRemotePort());
 		logger.info("request.getRemoteUser() : " + request.getRemoteUser());
 		for (Enumeration<String> headerrNames = request.getHeaderNames(); headerrNames.hasMoreElements();) {
-			logger.info(headerrNames.nextElement() + " : " + request.getHeader(headerrNames.nextElement()));
+			if(null != headerrNames.nextElement()) logger.info(headerrNames.nextElement() + " : " + request.getHeader(headerrNames.nextElement()));
 		}
 
 		Date date = new Date();

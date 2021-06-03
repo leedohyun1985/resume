@@ -49,13 +49,12 @@
 			
 				<th:block th:switch="${lang}">
 				<h1 th:case="en" class="mb-0" th:inline="text">
-					[[#{dohyun}]]<span class="text-primary" th:text="#{lee}"></span>
+					[[#{dohyun}]] <span class="text-primary" th:text="#{lee}"></span>
 				</h1>
-				<h1 th:case="ko" class="mb-0" th:inline="text">
-					[[#{lee}]]<span class="text-primary" th:text="#{dohyun}"></span>
+				<h1 th:case="*" class="mb-0" th:inline="text">
+					[[#{lee}]] <span class="text-primary" th:text="#{dohyun}"></span>
 				</h1>
 				</th:block>
-
 
 				
 				<div class="subheading mb-5">
