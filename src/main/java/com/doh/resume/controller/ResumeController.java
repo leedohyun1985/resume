@@ -28,16 +28,23 @@ public class ResumeController {
 		logger.info("request.getRemoteHost() : " + request.getRemoteHost());
 		logger.info("request.getRemotePort() : " + request.getRemotePort());
 		logger.info("request.getRemoteUser() : " + request.getRemoteUser());
-
+		
+		logger.info("접속 경로(referer) : " + request.getHeader("referer"));
+		logger.info("유저의 시스템 정보(user-agent) : " + request.getHeader("user-agent"));
+		logger.info("접속 ip(host) : " + request.getHeader("host"));
+		logger.info("브라우저 정보 (User-Agent) : " + request.getHeader("User-Agent"));
+		logger.info("클라이언트 ip 주소(X-Forwarded-For) : " + request.getHeader("X-Forwarded-For"));
+		logger.info("접속 경로(referer) : " + request.getHeader("referer")); 
+		
+		/*
 		for (Enumeration<String> headerrNames = request.getHeaderNames(); headerrNames.hasMoreElements();) {
 			try {
 				logger.info(headerrNames.nextElement() + " : " + request.getHeader(headerrNames.nextElement()));	
 			} catch (Exception e) {
 				logger.info(headerrNames.nextElement() + " : 이 항목으로 인해 에러 발생");
 			}
-			
-			
 		}
+		*/
 		logger.info("================================================================================");
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
