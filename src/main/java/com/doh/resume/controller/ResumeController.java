@@ -21,7 +21,7 @@ public class ResumeController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(HttpServletRequest request, Locale locale, Model model) {
-		logger.info("방문자 발생");
+		logger.info("방문자발생=========================================================================");
 		logger.info("request.getLocale() : " + request.getLocale());
 		logger.info("request.getRequestURL() : " + request.getRequestURL());
 		logger.info("request.getRemoteAddr() : " + request.getRemoteAddr());
@@ -32,7 +32,7 @@ public class ResumeController {
 		for (Enumeration<String> headerrNames = request.getHeaderNames(); headerrNames.hasMoreElements();) {
 			logger.info(headerrNames.nextElement() + " : " + request.getHeader(headerrNames.nextElement()));
 		}
-
+		logger.info("================================================================================");
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 
