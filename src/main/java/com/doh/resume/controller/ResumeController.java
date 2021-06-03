@@ -30,7 +30,13 @@ public class ResumeController {
 		logger.info("request.getRemoteUser() : " + request.getRemoteUser());
 
 		for (Enumeration<String> headerrNames = request.getHeaderNames(); headerrNames.hasMoreElements();) {
-			logger.info(headerrNames.nextElement() + " : " + request.getHeader(headerrNames.nextElement()));
+			try {
+				logger.info(headerrNames.nextElement() + " : " + request.getHeader(headerrNames.nextElement()));	
+			} catch (Exception e) {
+				logger.info(headerrNames.nextElement() + " : 이 항목으로 인해 에러 발생");
+			}
+			
+			
 		}
 		logger.info("================================================================================");
 		Date date = new Date();
