@@ -28,8 +28,9 @@ public class ResumeController {
 		logger.info("request.getRemoteHost() : " + request.getRemoteHost());
 		logger.info("request.getRemotePort() : " + request.getRemotePort());
 		logger.info("request.getRemoteUser() : " + request.getRemoteUser());
+
 		for (Enumeration<String> headerrNames = request.getHeaderNames(); headerrNames.hasMoreElements();) {
-			if(null != headerrNames.nextElement()) logger.info(headerrNames.nextElement() + " : " + request.getHeader(headerrNames.nextElement()));
+			logger.info(headerrNames.nextElement() + " : " + request.getHeader(headerrNames.nextElement()));
 		}
 
 		Date date = new Date();
@@ -38,8 +39,8 @@ public class ResumeController {
 		String formattedDate = dateFormat.format(date);
 
 		model.addAttribute("serverTime", formattedDate);
-		model.addAttribute("lang", locale.getLanguage());
-		model.addAttribute("country", locale.getCountry());
+		model.addAttribute("lang", null == locale.getLanguage() ? "ko" : locale.getLanguage());
+		model.addAttribute("country", null == locale.getCountry() ? "KR" : locale.getCountry());
 
 		return "resume";
 	}
