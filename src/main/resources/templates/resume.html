@@ -32,12 +32,12 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" th:text="#{About}"></a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience" th:text="#{Experience}"></a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education" th:text="#{Education}"></a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills" th:text="#{Skills}"></a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests" th:text="#{Interests}"></a></li>
-				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards" th:text="#{Awards}"></a></li>
+				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" th:text="#{about.About}"></a></li>
+				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience" th:text="#{about.Experience}"></a></li>
+				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education" th:text="#{about.Education}"></a></li>
+				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills" th:text="#{about.Skills}"></a></li>
+				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests" th:text="#{about.Interests}"></a></li>
+				<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards" th:text="#{about.Awards}"></a></li>
 			</ul>
 		</div>
 	</nav>
@@ -49,18 +49,18 @@
 			
 				<th:block th:switch="${lang}">
 				<h1 th:case="en" class="mb-0" th:inline="text">
-					[[#{dohyun}]] <span class="text-primary" th:text="#{lee}"></span>
+					[[#{about.dohyun}]] <span class="text-primary" th:text="#{about.lee}"></span>
 				</h1>
 				<h1 th:case="*" class="mb-0" th:inline="text">
-					[[#{lee}]] <span class="text-primary" th:text="#{dohyun}"></span>
+					[[#{about.lee}]] <span class="text-primary" th:text="#{about.dohyun}"></span>
 				</h1>
 				</th:block>
 
 				
 				<div class="subheading mb-5" th:inline="text">
-					[[#{MyAddress}]] · [[#{MyPhoneNumber}]]  · <a href="mailto:leedohyun1985@gmail.com">leedohyun1985@gmail.com</a>
+					[[#{about.MyAddress}]] · [[#{about.MyPhoneNumber}]]  · <a href="mailto:leedohyun1985@gmail.com">leedohyun1985@gmail.com</a>
 				</div>
-				<p class="lead mb-5" th:text="#{mainComments}" ></p>
+				<p class="lead mb-5" th:text="#{about.mainComments}" ></p>
 				<div class="social-icons">
 					<a class="social-icon" target="_blank" href="https://www.linkedin.com/in/leedohyun1985"><i class="fab fa-linkedin-in"></i></a> 
 					<a class="social-icon" target="_blank" href="https://github.com/leedohyun1985"><i class="fab fa-github"></i></a>
@@ -74,55 +74,90 @@
 		</section>
 		<hr class="m-0" />
 		<!-- Experience-->
+		<!-- January, February, March, April, May, June, July, August, September, October, November, December -->
 		<section class="resume-section" id="experience">
 			<div class="resume-section-content">
-				<h2 class="mb-5">Experience</h2>
+				<h2 class="mb-5" th:text="#{experience.EXPERIENCE}"></h2>
 				<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
 					<div class="flex-grow-1">
-						<h3 class="mb-0">Senior Web Developer</h3>
-						<div class="subheading mb-3">Intelitec Solutions</div>
-						<p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has
-							evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple
-							touchpoints for offshoring.</p>
+						<h3 class="mb-0" th:text="#{experience.h3.08}"></h3>
+						<div class="subheading mb-3" th:text="#{experience.div.08}"></div>
+						<p th:utext="#{experience.p.08}"></p>
 					</div>
 					<div class="flex-shrink-0">
-						<span class="text-primary">March 2013 - Present</span>
-					</div>
-				</div>
-				<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-					<div class="flex-grow-1">
-						<h3 class="mb-0">Web Developer</h3>
-						<div class="subheading mb-3">Intelitec Solutions</div>
-						<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional
-							clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-					</div>
-					<div class="flex-shrink-0">
-						<span class="text-primary">December 2011 - March 2013</span>
+						<span class="text-primary" th:text="#{experience.span.08}"></span>
 					</div>
 				</div>
 				<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
 					<div class="flex-grow-1">
-						<h3 class="mb-0">Junior Web Designer</h3>
-						<div class="subheading mb-3">Shout! Media Productions</div>
-						<p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to
-							maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform
-							integration.</p>
+						<h3 class="mb-0" th:text="#{experience.h3.07}"></h3>
+						<div class="subheading mb-3" th:text="#{experience.div.07}"></div>
+						<p th:utext="#{experience.p.07}"></p>
 					</div>
 					<div class="flex-shrink-0">
-						<span class="text-primary">July 2010 - December 2011</span>
+						<span class="text-primary" th:text="#{experience.span.07}"></span>
 					</div>
 				</div>
-				<div class="d-flex flex-column flex-md-row justify-content-between">
+				<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
 					<div class="flex-grow-1">
-						<h3 class="mb-0">Web Design Intern</h3>
-						<div class="subheading mb-3">Shout! Media Productions</div>
-						<p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
-							Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+						<h3 class="mb-0" th:text="#{experience.h3.06}"></h3>
+						<div class="subheading mb-3" th:text="#{experience.div.06}"></div>
+						<p th:utext="#{experience.p.06}"></p>
 					</div>
 					<div class="flex-shrink-0">
-						<span class="text-primary">September 2008 - June 2010</span>
+						<span class="text-primary" th:text="#{experience.span.06}"></span>
 					</div>
 				</div>
+				<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+					<div class="flex-grow-1">
+						<h3 class="mb-0" th:text="#{experience.h3.05}"></h3>
+						<div class="subheading mb-3" th:text="#{experience.div.05}"></div>
+						<p th:utext="#{experience.p.05}"></p>
+					</div>
+					<div class="flex-shrink-0">
+						<span class="text-primary" th:text="#{experience.span.05}"></span>
+					</div>
+				</div>
+				<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+					<div class="flex-grow-1">
+						<h3 class="mb-0" th:text="#{experience.h3.04}"></h3>
+						<div class="subheading mb-3" th:text="#{experience.div.04}"></div>
+						<p th:utext="#{experience.p.04}"></p>
+					</div>
+					<div class="flex-shrink-0">
+						<span class="text-primary" th:text="#{experience.span.04}"></span>
+					</div>
+				</div>
+				<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+					<div class="flex-grow-1">
+						<h3 class="mb-0" th:text="#{experience.h3.03}"></h3>
+						<div class="subheading mb-3" th:text="#{experience.div.03}"></div>
+						<p th:utext="#{experience.p.03}"></p>
+					</div>
+					<div class="flex-shrink-0">
+						<span class="text-primary" th:text="#{experience.span.03}"></span>
+					</div>
+				</div>
+				<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+					<div class="flex-grow-1">
+						<h3 class="mb-0" th:text="#{experience.h3.02}"></h3>
+						<div class="subheading mb-3" th:text="#{experience.div.02}"></div>
+						<p th:utext="#{experience.p.02}"></p>
+					</div>
+					<div class="flex-shrink-0">
+						<span class="text-primary" th:text="#{experience.span.02}"></span>
+					</div>
+				</div>
+				<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+					<div class="flex-grow-1">
+						<h3 class="mb-0" th:text="#{experience.h3.01}"></h3>
+						<div class="subheading mb-3" th:text="#{experience.div.01}"></div>
+						<p th:utext="#{experience.p.01}"></p>
+					</div>
+					<div class="flex-shrink-0">
+						<span class="text-primary" th:text="#{experience.span.01}"></span>
+					</div>
+				</div>				
 			</div>
 		</section>
 		<hr class="m-0" />
