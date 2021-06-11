@@ -270,8 +270,8 @@
 		<section class="resume-section" id="awards">
 			<div class="resume-section-content">
 				<h2 class="mb-5" th:text="#{awards.Awards&Certifications}"></h2>
-				<ul class="fa-ul mb-0">
-					<li th:text="#{awards.li01}"><span class="fa-li"><i class="fas fa-scroll"></i></span></li>
+				<ul class="fa-ul mb-0" th:inline="text">
+					<li><span class="fa-li"><i class="fas fa-scroll"></i></span>[[#{awards.li01}]] </li>
 				</ul>
 				
 <!-- 
